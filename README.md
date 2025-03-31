@@ -69,7 +69,6 @@
 - **Экстремальные значения**: Очень большие (близкие к `DBL_MAX`), очень малые (денормализованные) числа.  
 - **Компенсация ошибок**: Суммы с взаимно уничтожающимися слагаемыми (например, `1e100 + 1 - 1e100`).  
 - **Специальные значения**: Проверка корректной обработки `NaN`, бесконечностей, комбинаций спецзначений.  
-- **Производительность**: Тесты с большими массивами (тысячи элементов) для проверки устойчивости.  
 
 ### Валидация
 
@@ -88,3 +87,18 @@
 Для компиляции тестов выполните следующую команду:  
 ```sh
 g++ -std=c++11 -o tests tests.cpp rump_ogita_oshi_sum.cpp -lgmpxx -lgmp
+```
+## Источники
+
+- **Оригинальная работа**:  
+  Rump, S.M., Ogita, T., Oishi, S. (2008). *Accurate Floating-Point Summation*. SIAM Journal on Scientific Computing, 30(4), 2008.  
+
+- **Документация GMP**:  
+  GNU Multiple Precision Arithmetic Library.  
+
+- **Теоретические основы**:  
+  Higham, N.J. (2002). *Accuracy and Stability of Numerical Algorithms*. SIAM.  
+  Глава 4: «Summation».
+
+- **Алгоритм Кэхена**:  
+  Kahan, W. (1965). *Further remarks on reducing truncation errors*. Communications of the ACM.
